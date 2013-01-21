@@ -1,0 +1,4 @@
+# cat=basic/enable; type=text; label=Public key
+public_key = demopublickey
+# cat=basic/enable; type=text; label=Secret key
+secret_key = demoprivatekey
