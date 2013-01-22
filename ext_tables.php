@@ -2,7 +2,7 @@
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 include_once(t3lib_extMgm::extPath('uploadcare').'uploadcare-php/uploadcare/lib/5.2/Uploadcare.php');
 
-if (!function_exists('text_uc')) {
+if (!function_exists('test_uc')) {
 	function test_uc($PA,$fobj) {
 		global $TYPO3_CONF_VARS;
 		$extConfig = unserialize($TYPO3_CONF_VARS['EXT']['extConf']['uploadcare']);
