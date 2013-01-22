@@ -1,10 +1,6 @@
 <?php
 class tx_uploadcare_pi1_wizicon {
-	function proc($wizardItems) {
-		global $LANG;
-
-		$LL = $this->includeLocalLang();
-
+	function proc($wizardItems) {		
 		$wizardItems['plugins_tx_uploadcare_pi1'] = array(
 				'icon' => t3lib_extMgm::extRelPath('sr_uploadcare').'ext_icon.gif',
 				'title' => 'Uploadcare',
