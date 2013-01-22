@@ -2,7 +2,7 @@
 class tx_uploadcare_pi1_wizicon {
 	function proc($wizardItems) {		
 		$wizardItems['plugins_tx_uploadcare_pi1'] = array(
-				'icon' => t3lib_extMgm::extRelPath('sr_uploadcare').'ext_icon.gif',
+				'icon' => t3lib_extMgm::extRelPath('uploadcare').'ext_icon.gif',
 				'title' => 'Uploadcare',
 				'description' => 'Uploadcare',
 				'params' => '&defVals[tt_content][CType]=uploadcare_pi1' );
