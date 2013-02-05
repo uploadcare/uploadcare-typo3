@@ -2,28 +2,6 @@
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 include_once(t3lib_extMgm::extPath('uploadcare').'uploadcare-php/uploadcare/lib/5.2/Uploadcare.php');
 
-if (!function_exists('test_uc')) {
-	function test_uc($PA,$fobj) {
-		global $TYPO3_CONF_VARS;
-		$extConfig = unserialize($TYPO3_CONF_VARS['EXT']['extConf']['uploadcare']);
-		$api = new Uploadcare_Api($extConfig['public_key'], $extConfig['secret_key']);
-		
-		$name = $PA['itemName'];
-		$name = str_replace(array('[', ']'), array('\\\\[', '\\\\]'), $name);
-		
-		$result = "
-		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-		<script>
-			Ext.select('input[name=".$name."]').setStyle('display', 'none');
-			Ext.select('input[name=".$name."]').set({'role': 'uploadcare-uploader'});
-			jQuery('input[name=".$name."]').prev().hide();
-		</script>
-		";
-		$result .= $api->widget->getScriptTag();
-		return $result;
-	}
-}
-
 $tempColumns = array(
 		'tx_uploadcare_widget' => array(
 				'exclude' => 0,
@@ -31,9 +9,10 @@ $tempColumns = array(
 				'config' => array(
 						'type' => 'input',
 						'wizards' => array(
-								'uc_widget' => array(
+								'uploadcareWizard' => array(
 										'type' => 'userFunc',
-										'userFunc' => 'test_uc',
+										'userFunc' => 'EXT:uploadcare/class.tx_uploadcare_tca.php:tx_uploadcare_tca->renderWidget',
+										'params' => array(),										
 								),
 						),
 				),
