@@ -34,7 +34,9 @@ Save the Content Element. Image will be displayed inside your frontend block.
 
 ## Downloads 
 
-**1.0.0** [Download](https://ucarecdn.com/cf761c55-3cfc-4379-9165-a77d076d401a/uploadcare_1.0.0.zip)
+**1.0.2** ([Download T3X](https://ucarecdn.com/988cd1f0-29ae-492d-8ebe-4073a6adbaf4/uploadcare/T3X_uploadcare-1_0_2.t3x))
+
+**1.0.0** ([Download ZIP](https://ucarecdn.com/cf761c55-3cfc-4379-9165-a77d076d401a/uploadcare_1.0.0.zip))
 
 [1]: https://uploadcare.com/
 [2]: https://uploadcare.com/documentation/reference/basic/cdn.html
